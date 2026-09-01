@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "pancakes=0,syrup=false": {
+      "model": "twilitgourmet:block/pancake_stack_0"
+    },
+    "pancakes=0,syrup=true": {
+      "model": "twilitgourmet:block/pancake_stack_0_syrup"
+    },
+    "pancakes=1,syrup=false": {
+      "model": "twilitgourmet:block/pancake_stack_1"
+    },
+    "pancakes=1,syrup=true": {
+      "model": "twilitgourmet:block/pancake_stack_1_syrup"
+    },
+    "pancakes=2,syrup=false": {
+      "model": "twilitgourmet:block/pancake_stack_2"
+    },
+    "pancakes=2,syrup=true": {
+      "model": "twilitgourmet:block/pancake_stack_2_syrup"
+    },
+    "pancakes=3,syrup=false": {
+      "model": "twilitgourmet:block/pancake_stack_3"
+    },
+    "pancakes=3,syrup=true": {
+      "model": "twilitgourmet:block/pancake_stack_3_syrup"
+    }
+  }
+}

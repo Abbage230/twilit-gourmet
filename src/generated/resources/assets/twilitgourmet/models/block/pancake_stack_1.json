@@ -1,0 +1,6 @@
+{
+  "parent": "twilitgourmet:block/template_pancake_stack_1",
+  "textures": {
+    "pancake": "twilitgourmet:block/pancake"
+  }
+}

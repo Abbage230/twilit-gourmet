@@ -1,0 +1,68 @@
+{
+  "parent": "block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "inside": "twilitgourmet:block/giant_apple_inside",
+    "side": "twilitgourmet:block/giant_apple_side",
+    "stem": "twilitgourmet:block/giant_apple_stem",
+    "top": "twilitgourmet:block/giant_apple_top",
+    "particle": "#side"
+  },
+  "elements": [
+    {
+      "from": [8, 0, 1],
+      "to": [15, 14, 8],
+      "faces": {
+        "north": {"uv": [1, 1, 8, 15], "texture": "#side"},
+        "east": {"uv": [8, 1, 15, 15], "texture": "#side"},
+        "south": {"uv": [8, 1, 15, 15], "texture": "#inside"},
+        "west": {"uv": [1, 1, 8, 15], "texture": "#inside"},
+        "up": {"uv": [8, 1, 15, 8], "texture": "#top"},
+        "down": {"uv": [8, 8, 15, 15], "texture": "#top"}
+      }
+    },
+    {
+      "from": [7, 14, 7],
+      "to": [9, 18, 9],
+      "faces": {
+        "north": {"uv": [3, 9, 5, 13], "texture": "#stem"},
+        "east": {"uv": [9, 9, 11, 13], "texture": "#stem"},
+        "south": {"uv": [7, 9, 9, 13], "texture": "#stem"},
+        "west": {"uv": [5, 9, 7, 13], "texture": "#stem"},
+        "up": {"uv": [5, 7, 7, 9], "texture": "#stem"},
+        "down": {"uv": [7, 7, 9, 9], "texture": "#stem"}
+      }
+    },
+    {
+      "from": [4, 17, 8],
+      "to": [8, 21, 8],
+      "faces": {
+        "north": {"uv": [0, 0, 4, 4], "texture": "#stem"},
+        "east": {"uv": [0, 0, 0, 4], "texture": "#stem"},
+        "south": {"uv": [4, 0, 0, 4], "texture": "#stem"},
+        "west": {"uv": [0, 0, 0, 4], "texture": "#stem"}
+      }
+    },
+    {
+      "from": [6, 0, 6],
+      "to": [8, 14, 10],
+      "faces": {
+        "north": {"uv": [8, 1, 10, 15], "texture": "#inside"},
+        "south": {"uv": [6, 1, 8, 15], "texture": "#inside"},
+        "west": {"uv": [6, 1, 10, 15], "texture": "#inside"},
+        "up": {"uv": [6, 6, 8, 10], "texture": "#top"},
+        "down": {"uv": [6, 6, 8, 10], "texture": "#top"}
+      }
+    },
+    {
+      "from": [8, 0, 8],
+      "to": [10, 14, 10],
+      "faces": {
+        "east": {"uv": [6, 1, 8, 15], "texture": "#inside"},
+        "south": {"uv": [8, 1, 10, 15], "texture": "#inside"},
+        "up": {"uv": [8, 8, 10, 10], "texture": "#top"},
+        "down": {"uv": [8, 6, 10, 8], "texture": "#top"}
+      }
+    }
+  ]
+}

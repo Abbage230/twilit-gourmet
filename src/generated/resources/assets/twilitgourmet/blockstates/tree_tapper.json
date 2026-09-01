@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,pouring=false": {
+      "model": "twilitgourmet:block/tree_tapper",
+      "y": 90
+    },
+    "facing=east,pouring=true": {
+      "model": "twilitgourmet:block/tree_tapper_pouring",
+      "y": 90
+    },
+    "facing=north,pouring=false": {
+      "model": "twilitgourmet:block/tree_tapper"
+    },
+    "facing=north,pouring=true": {
+      "model": "twilitgourmet:block/tree_tapper_pouring"
+    },
+    "facing=south,pouring=false": {
+      "model": "twilitgourmet:block/tree_tapper",
+      "y": 180
+    },
+    "facing=south,pouring=true": {
+      "model": "twilitgourmet:block/tree_tapper_pouring",
+      "y": 180
+    },
+    "facing=west,pouring=false": {
+      "model": "twilitgourmet:block/tree_tapper",
+      "y": 270
+    },
+    "facing=west,pouring=true": {
+      "model": "twilitgourmet:block/tree_tapper_pouring",
+      "y": 270
+    }
+  }
+}

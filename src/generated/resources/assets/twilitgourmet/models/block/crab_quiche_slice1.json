@@ -1,0 +1,9 @@
+{
+  "parent": "farmersdelight:block/template_pie_slice1",
+  "textures": {
+    "bottom": "farmersdelight:block/pie_bottom",
+    "inner": "twilitgourmet:block/crab_quiche_inner",
+    "side": "farmersdelight:block/pie_side",
+    "top": "twilitgourmet:block/crab_quiche_top"
+  }
+}

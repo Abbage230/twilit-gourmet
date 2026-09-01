@@ -1,0 +1,8 @@
+{
+  "item.twilitgourmet.crab_shell.crack": {
+    "sounds": [
+      "twilitgourmet:shell_crack"
+    ],
+    "subtitle": "subtitles.twilitgourmet.item.crab_shell.crack"
+  }
+}

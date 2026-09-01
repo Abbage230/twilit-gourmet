@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twilitgourmet:twilight_oak_cabinet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_trapdoor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twilightforest:twilight_oak_trapdoor"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_trapdoor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twilitgourmet:twilight_oak_cabinet"
+    ]
+  }
+}

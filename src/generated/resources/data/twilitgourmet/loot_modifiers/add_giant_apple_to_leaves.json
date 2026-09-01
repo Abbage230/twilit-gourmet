@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "twilightforest:blocks/giant_leaves"
+    }
+  ],
+  "table": "twilitgourmet:injection/giant_apple"
+}

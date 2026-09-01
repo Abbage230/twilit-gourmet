@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "twilitgourmet:crab_claw"
+    },
+    "F": {
+      "item": "twilitgourmet:crab_shell_fragment"
+    },
+    "H": {
+      "item": "twilightforest:knightmetal_helmet"
+    },
+    "L": {
+      "item": "twilitgourmet:crab_leg"
+    }
+  },
+  "pattern": [
+    "LFL",
+    "CHL",
+    "FFF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twilitgourmet:shell_helmet"
+  }
+}

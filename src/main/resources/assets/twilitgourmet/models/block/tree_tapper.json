@@ -1,0 +1,40 @@
+{
+	"parent": "block/block",
+	"render_type": "minecraft:cutout",
+	"textures": {
+		"tap": "twilitgourmet:block/tree_tapper",
+		"particle": "block/iron_block"
+	},
+	"elements": [
+		{
+			"from": [7, 8, 8],
+			"to": [9, 10, 16],
+			"faces": {
+				"north": {"uv": [8, 14, 10, 16], "texture": "#tap"},
+				"east": {"uv": [16, 14, 8, 16], "texture": "#tap"},
+				"west": {"uv": [0, 14, 8, 16], "texture": "#tap"},
+				"up": {"uv": [8, 6, 10, 14], "texture": "#tap"},
+				"down": {"uv": [10, 14, 12, 6], "texture": "#tap"}
+			}
+		},
+		{
+			"from": [7, 6, 8],
+			"to": [9, 8, 10],
+			"faces": {
+				"north": {"uv": [2, 2, 4, 4], "texture": "#tap"},
+				"east": {"uv": [4, 2, 6, 4], "texture": "#tap"},
+				"south": {"uv": [6, 2, 8, 4], "texture": "#tap"},
+				"west": {"uv": [0, 2, 2, 4], "texture": "#tap"},
+				"down": {"uv": [4, 0, 6, 2], "texture": "#tap"}
+			}
+		},
+		{
+			"from": [5.5, 10, 11],
+			"to": [8.5, 12, 11],
+			"faces": {
+				"north": {"uv": [11, 2, 14, 4], "texture": "#tap"},
+				"south": {"uv": [14, 2, 11, 4], "texture": "#tap"}
+			}
+		}
+	]
+}

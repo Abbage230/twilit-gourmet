@@ -1,0 +1,189 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
+plugins {
+    id 'java-library'
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+def secrets = new Properties()
+def secretsFile = file('secrets.properties')
+if (secretsFile.exists()) {
+    secretsFile.withInputStream {
+        stream -> secrets.load(stream)
+    }
+
+    fileTree("secrets").matching {
+        include "**/*.properties"
+    }.each {
+        File file ->
+            file.withInputStream {
+                stream -> secrets.load(stream)
+            }
+    }
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+version = "${project.minecraft_version}-${project.mod_version}"
+group = "com.gizmo.${project.modid}"
+
+base {
+    archivesName = mod_name
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs << "-Xlint:all,-classfile,-processing,-deprecation,-this-escape" << "-Werror"
+    options.encoding = 'UTF-8'
+}
+
+sourceSets {
+    data {
+        compileClasspath += main.compileClasspath + main.output
+
+        java {
+            srcDirs = ['src/main/java', 'src/data/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+configurations {
+    dataImplementation.extendsFrom implementation
+}
+
+neoForge {
+    evaluationDependsOnChildren()
+
+    version = project.neo_version
+    validateAccessTransformers = true
+
+    addModdingDependenciesTo sourceSets.data
+
+
+    mods {
+        "${project.modid}" {
+            it.sourceSet this.sourceSets.main
+        }
+
+        "${project.modid}-data" {
+            it.sourceSet this.sourceSets.main
+            it.sourceSet this.sourceSets.data
+        }
+    }
+
+    def mainMod = mods."${project.modid}"
+    def dataMod = mods."${project.modid}-data"
+
+    runs {
+        configureEach {
+            logLevel = org.slf4j.event.Level.DEBUG
+            loadedMods = [mainMod]
+        }
+
+        client {
+            client()
+            if (secrets.getProperty("uuid")) {
+                programArguments.addAll(
+                        '--username', secrets.getProperty("username"),
+                        '--uuid', secrets.getProperty("uuid"),
+                        '--accessToken', "",
+                        '--xuid', ""
+                )
+            }
+        }
+
+        server {
+            server()
+            programArgument '--nogui'
+        }
+
+        data {
+            data()
+            programArguments.addAll '--mod', modid, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            sourceSet = this.sourceSets.data
+            loadedMods = [dataMod]
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+    maven {
+        name 'Curseforge Maven'
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        name 'Jared\'s Maven' // JEI
+        url 'https://maven.blamejared.com/'
+    }
+    maven {
+        name = "TerraformersMC" //EMI
+        url = "https://maven.terraformersmc.com/"
+    }
+    maven {
+        name 'Tamaized\'s Maven' // Twilight Forest
+        url "https://maven.tamaized.com/releases"
+    }
+}
+
+dependencies {
+    compileOnly "mezz.jei:jei-${project.minecraft_version}-neoforge:${project.jei_version}"
+    implementation "dev.emi:emi-neoforge:${project.emi_version}+${project.minecraft_version}"
+    runtimeOnly "curse.maven:jade-324717:8591319"
+
+    implementation "curse.maven:farmers-delight-398521:8083481"
+    implementation "team-twilight:twilightforest:${project.tf_version}:universal"
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
+
+processResources {
+    def ver = project.version
+    filesMatching("META-INF/neoforge.mods.toml") {
+        expand([
+                'file': [
+                        'jarVersion': ver
+                ]
+        ])
+    }
+    exclude ".cache"
+    def lazyTree = providers.provider {
+        fileTree(dir: getOutputs().getFiles().getAsPath(), includes: ["**/*.json", "**/*.mcmeta"])
+    }
+    doLast {
+        lazyTree.get().each {
+            File file -> file.setText(JsonOutput.toJson(new JsonSlurper().parse(file)))
+        }
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+                'Specification-Title'     : modid,
+                'Specification-Vendor'    : "GizmoTheMoonPig",
+                'Specification-Version'   : "1",
+                'Implementation-Title'    : project.name,
+                'Implementation-Version'  : project.jar.archiveVersion,
+                'Implementation-Vendor'   : "GizmoTheMoonPig",
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}

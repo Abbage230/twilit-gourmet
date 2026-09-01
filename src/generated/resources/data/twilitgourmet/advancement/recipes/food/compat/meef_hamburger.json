@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_meef_patty": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twilitgourmet:meef_patty"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twilitgourmet:compat/meef_hamburger"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_meef_patty"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twilitgourmet:compat/meef_hamburger"
+    ]
+  }
+}

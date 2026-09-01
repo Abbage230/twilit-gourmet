@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "twilitgourmet:block/mining_cabinet_front_open",
+    "side": "twilitgourmet:block/mining_cabinet_side",
+    "top": "twilitgourmet:block/mining_cabinet_top"
+  }
+}

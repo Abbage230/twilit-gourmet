@@ -1,0 +1,92 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "twilitgourmet:cooked_crab",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "servings": "6"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "twilitgourmet:cooked_crab"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:any_of",
+                "terms": [
+                  {
+                    "block": "twilitgourmet:cooked_crab",
+                    "condition": "minecraft:block_state_property",
+                    "properties": {
+                      "servings": "6"
+                    }
+                  },
+                  {
+                    "block": "twilitgourmet:cooked_crab",
+                    "condition": "minecraft:block_state_property",
+                    "properties": {
+                      "servings": "0"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "twilitgourmet:crab_shell_fragment"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "block": "twilitgourmet:cooked_crab",
+            "condition": "minecraft:block_state_property",
+            "properties": {
+              "servings": "6"
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bowl"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "twilitgourmet:blocks/cooked_crab"
+}

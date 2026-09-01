@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twilitgourmet:venison_kebab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_venison": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twilightforest:cooked_venison"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_venison"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twilitgourmet:venison_kebab"
+    ]
+  }
+}

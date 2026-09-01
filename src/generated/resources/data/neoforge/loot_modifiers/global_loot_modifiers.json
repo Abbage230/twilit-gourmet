@@ -1,0 +1,14 @@
+{
+  "entries": [
+    "twilitgourmet:scavenging_ham_from_boar",
+    "twilitgourmet:scavenging_smoked_ham_from_boar",
+    "twilitgourmet:scavenging_leather_from_deer",
+    "twilitgourmet:scavenging_hide_from_dwarf_rabbit",
+    "twilitgourmet:scavenging_feather_from_penguin",
+    "twilitgourmet:scavenging_string_from_tf_spiders",
+    "twilitgourmet:add_giant_apple_to_leaves",
+    "twilitgourmet:add_ice_knives_to_aurora_palace",
+    "twilitgourmet:add_knightmetal_knives_to_stronghold"
+  ],
+  "replace": false
+}

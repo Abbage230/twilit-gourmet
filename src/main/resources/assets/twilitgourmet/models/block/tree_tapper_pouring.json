@@ -1,0 +1,51 @@
+{
+  "parent": "block/block",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "2": "block/water_flow",
+    "tap": "twilitgourmet:block/tree_tapper",
+    "particle": "block/iron_block"
+  },
+  "elements": [
+    {
+      "from": [7, 8, 8],
+      "to": [9, 10, 16],
+      "faces": {
+        "north": {"uv": [8, 14, 10, 16], "texture": "#tap"},
+        "east": {"uv": [16, 14, 8, 16], "texture": "#tap"},
+        "west": {"uv": [0, 14, 8, 16], "texture": "#tap"},
+        "up": {"uv": [8, 6, 10, 14], "texture": "#tap"},
+        "down": {"uv": [10, 14, 12, 6], "texture": "#tap"}
+      }
+    },
+    {
+      "from": [7, 6, 8],
+      "to": [9, 8, 10],
+      "faces": {
+        "north": {"uv": [2, 2, 4, 4], "texture": "#tap"},
+        "east": {"uv": [4, 2, 6, 4], "texture": "#tap"},
+        "south": {"uv": [6, 2, 8, 4], "texture": "#tap"},
+        "west": {"uv": [0, 2, 2, 4], "texture": "#tap"},
+        "down": {"uv": [4, 0, 6, 2], "texture": "#tap"}
+      }
+    },
+    {
+      "from": [5.5, 10, 11],
+      "to": [8.5, 12, 11],
+      "faces": {
+        "north": {"uv": [11, 2, 14, 4], "texture": "#tap"},
+        "south": {"uv": [14, 2, 11, 4], "texture": "#tap"}
+      }
+    },
+    {
+      "from": [7.2, -11.8, 8.2],
+      "to": [8.8, 6.8, 9.8],
+      "faces": {
+        "north": {"uv": [3.5, 0, 4.5, 9.5], "texture": "#2", "tintindex": 1},
+        "east": {"uv": [0.5, 0, 1.5, 9.5], "texture": "#2", "tintindex": 1},
+        "south": {"uv": [9.5, 0, 10.5, 9.5], "texture": "#2", "tintindex": 1},
+        "west": {"uv": [6.5, 0, 7.5, 9.5], "texture": "#2", "tintindex": 1}
+      }
+    }
+  ]
+}

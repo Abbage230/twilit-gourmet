@@ -1,0 +1,116 @@
+{
+  "render_type": "cutout",
+  "textures": {
+    "food": "twilitgourmet:block/crab_cakes",
+    "tray_bottom": "farmersdelight:block/tray_bottom",
+    "tray": "farmersdelight:block/tray",
+    "particle": "#food"
+  },
+  "elements": [
+    {
+      "name": "sauce",
+      "from": [11, 1, 2],
+      "to": [14, 3, 5],
+      "faces": {
+        "north": {"uv": [10, 0, 13, 2], "texture": "#food"},
+        "east": {"uv": [10, 0, 13, 2], "texture": "#food"},
+        "south": {"uv": [10, 0, 13, 2], "texture": "#food"},
+        "west": {"uv": [10, 0, 13, 2], "texture": "#food"},
+        "up": {"uv": [8, 11, 5, 8], "texture": "#food"}
+      }
+    },
+    {
+      "name": "base",
+      "from": [1, 0, 1],
+      "to": [15, 1, 15],
+      "faces": {
+        "north": {"uv": [1, 15, 15, 16], "texture": "#tray"},
+        "east": {"uv": [1, 15, 15, 16], "texture": "#tray"},
+        "south": {"uv": [1, 15, 15, 16], "texture": "#tray"},
+        "west": {"uv": [1, 15, 15, 16], "texture": "#tray"},
+        "up": {"uv": [1, 0, 15, 14], "texture": "#tray"},
+        "down": {"uv": [1, 1, 15, 15], "texture": "#tray_bottom", "cullface": "down"}
+      }
+    },
+    {
+      "name": "north_edge",
+      "from": [2, 1, 1],
+      "to": [14, 2, 2],
+      "faces": {
+        "north": {"uv": [2, 14, 14, 15], "texture": "#tray"},
+        "south": {"uv": [2, 14, 14, 15], "texture": "#tray"},
+        "up": {"uv": [2, 0, 14, 1], "texture": "#tray"}
+      }
+    },
+    {
+      "name": "south_edge",
+      "from": [2, 1, 14],
+      "to": [14, 2, 15],
+      "faces": {
+        "north": {"uv": [2, 14, 14, 15], "texture": "#tray"},
+        "south": {"uv": [2, 14, 14, 15], "texture": "#tray"},
+        "up": {"uv": [2, 13, 14, 14], "texture": "#tray"}
+      }
+    },
+    {
+      "name": "west_edge",
+      "from": [1, 1, 1],
+      "to": [2, 2, 15],
+      "faces": {
+        "north": {"uv": [14, 14, 15, 15], "texture": "#tray"},
+        "east": {"uv": [1, 14, 15, 15], "texture": "#tray"},
+        "south": {"uv": [1, 14, 2, 15], "texture": "#tray"},
+        "west": {"uv": [1, 14, 15, 15], "texture": "#tray"},
+        "up": {"uv": [1, 0, 2, 14], "texture": "#tray"}
+      }
+    },
+    {
+      "name": "east_edge",
+      "from": [14, 1, 1],
+      "to": [15, 2, 15],
+      "faces": {
+        "north": {"uv": [1, 14, 2, 15], "texture": "#tray"},
+        "east": {"uv": [1, 14, 15, 15], "texture": "#tray"},
+        "south": {"uv": [14, 14, 15, 15], "texture": "#tray"},
+        "west": {"uv": [1, 14, 15, 15], "texture": "#tray"},
+        "up": {"uv": [14, 0, 15, 14], "texture": "#tray"}
+      }
+    },
+    {
+      "from": [11, 3, 5],
+      "to": [14, 4, 5],
+      "rotation": {"angle": 0, "axis": "y", "origin": [12, 3, 3]},
+      "faces": {
+        "north": {"uv": [3, 12, 0, 13], "texture": "#food"},
+        "south": {"uv": [0, 12, 3, 13], "texture": "#food"}
+      }
+    },
+    {
+      "from": [11, 3, 2],
+      "to": [14, 4, 2],
+      "rotation": {"angle": 0, "axis": "y", "origin": [12, 3, 0]},
+      "faces": {
+        "north": {"uv": [0, 12, 3, 13], "texture": "#food"},
+        "south": {"uv": [3, 12, 0, 13], "texture": "#food"}
+      }
+    },
+    {
+      "from": [14, 3, 2],
+      "to": [14, 4, 5],
+      "rotation": {"angle": 0, "axis": "y", "origin": [12, 3, 3]},
+      "faces": {
+        "east": {"uv": [0, 12, 3, 13], "texture": "#food"},
+        "west": {"uv": [3, 12, 0, 13], "texture": "#food"}
+      }
+    },
+    {
+      "from": [11, 3, 2],
+      "to": [11, 4, 5],
+      "rotation": {"angle": 0, "axis": "y", "origin": [9, 3, 3]},
+      "faces": {
+        "east": {"uv": [3, 12, 0, 13], "texture": "#food"},
+        "west": {"uv": [0, 12, 3, 13], "texture": "#food"}
+      }
+    }
+  ]
+}

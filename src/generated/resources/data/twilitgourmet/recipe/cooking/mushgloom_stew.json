@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "twilightforest:torchberries"
+    },
+    {
+      "item": "twilightforest:mushgloom"
+    },
+    {
+      "item": "twilightforest:mushgloom"
+    },
+    {
+      "item": "twilightforest:liveroot"
+    },
+    {
+      "item": "farmersdelight:bone_broth"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "twilitgourmet:mushgloom_stew"
+  }
+}

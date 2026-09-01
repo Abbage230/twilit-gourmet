@@ -1,0 +1,43 @@
+{
+  "values": {
+    "twilitgourmet:apple_slice": {
+      "chance": 0.65
+    },
+    "twilitgourmet:breadcrumbs": {
+      "chance": 0.3
+    },
+    "twilitgourmet:crab_claw": {
+      "chance": 0.5
+    },
+    "twilitgourmet:crab_leg": {
+      "chance": 0.5
+    },
+    "twilitgourmet:crab_quiche": {
+      "chance": 1.0
+    },
+    "twilitgourmet:crab_quiche_slice": {
+      "chance": 0.85
+    },
+    "twilitgourmet:crab_shell_fragment": {
+      "chance": 0.3
+    },
+    "twilitgourmet:giant_apple": {
+      "chance": 1.0
+    },
+    "twilitgourmet:maze_cheesecake": {
+      "chance": 1.0
+    },
+    "twilitgourmet:maze_cheesecake_slice": {
+      "chance": 0.85
+    },
+    "twilitgourmet:maze_wafer_crust": {
+      "chance": 0.65
+    },
+    "twilitgourmet:mushgloom_colony": {
+      "chance": 1.0
+    },
+    "twilitgourmet:pancake": {
+      "chance": 0.65
+    }
+  }
+}

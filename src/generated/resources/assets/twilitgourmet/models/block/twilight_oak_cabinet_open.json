@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "twilitgourmet:block/twilight_oak_cabinet_front_open",
+    "side": "twilitgourmet:block/twilight_oak_cabinet_side",
+    "top": "twilitgourmet:block/twilight_oak_cabinet_top"
+  }
+}

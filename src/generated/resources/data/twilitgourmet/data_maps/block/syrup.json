@@ -1,0 +1,22 @@
+{
+  "values": {
+    "#minecraft:acacia_logs": "minecraft:acacia",
+    "#minecraft:birch_logs": "minecraft:birch",
+    "#minecraft:cherry_logs": "minecraft:cherry",
+    "#minecraft:crimson_stems": "minecraft:crimson",
+    "#minecraft:dark_oak_logs": "minecraft:dark_oak",
+    "#minecraft:jungle_logs": "minecraft:jungle",
+    "#minecraft:mangrove_logs": "minecraft:mangrove",
+    "#minecraft:oak_logs": "minecraft:oak",
+    "#minecraft:spruce_logs": "minecraft:spruce",
+    "#minecraft:warped_stems": "minecraft:warped",
+    "#twilightforest:canopy_logs": "twilightforest:canopy",
+    "#twilightforest:darkwood_logs": "twilightforest:darkwood",
+    "#twilightforest:mangrove_logs": "twilightforest:mangrove",
+    "#twilightforest:mining_logs": "twilightforest:mining",
+    "#twilightforest:sortwood_logs": "twilightforest:sorting",
+    "#twilightforest:timewood_logs": "twilightforest:time",
+    "#twilightforest:transwood_logs": "twilightforest:transformation",
+    "#twilightforest:twilight_oak_logs": "twilightforest:twilight_oak"
+  }
+}

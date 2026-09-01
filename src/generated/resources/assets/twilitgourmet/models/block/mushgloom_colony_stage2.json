@@ -1,0 +1,7 @@
+{
+  "parent": "twilightforest:block/mushgloom",
+  "textures": {
+    "cross": "twilitgourmet:block/mushgloom_colony_stage2",
+    "cross2": "twilitgourmet:block/mushgloom_colony_stage2_head"
+  }
+}

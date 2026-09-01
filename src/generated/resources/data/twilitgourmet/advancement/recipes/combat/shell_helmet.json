@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twilitgourmet:shell_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "no_toast_for_you": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "no_toast_for_you"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twilitgourmet:shell_helmet"
+    ]
+  }
+}

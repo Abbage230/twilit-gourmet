@@ -1,0 +1,11 @@
+// 1.21.1	2026-08-28T17:05:20.85824493	Tags for minecraft:block mod id twilitgourmet
+c33866dfe0e321d2be2e48a1b0beed0bd24ebbbc data/farmersdelight/tags/block/cabinets/wooden.json
+5949b35a436ce9143018285ef653433c7677e33e data/farmersdelight/tags/block/feasts.json
+0f2507619666a0a8f7042b13749793939acdd2b4 data/farmersdelight/tags/block/mineable/knife.json
+2d6718e0fc42d97e2c5ee3425b96463ad0d011fe data/farmersdelight/tags/block/mushroom_colonies.json
+0f2507619666a0a8f7042b13749793939acdd2b4 data/farmersdelight/tags/block/pies.json
+06fabc2321aaacf2c6d5a549bf92f073a5b07a32 data/farmersdelight/tags/block/planted_from_below.json
+c33866dfe0e321d2be2e48a1b0beed0bd24ebbbc data/minecraft/tags/block/mineable/axe.json
+21ffd20ccf5963861c3b6cec61be84704aa19226 data/minecraft/tags/block/mineable/pickaxe.json
+f9e20a4d1b30bd2ab4aa65244fd5cc83ceabd768 data/minecraft/tags/block/replaceable.json
+f9e20a4d1b30bd2ab4aa65244fd5cc83ceabd768 data/minecraft/tags/block/replaceable_by_trees.json

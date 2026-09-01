@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "item": "farmersdelight:pie_crust"
+        },
+        {
+          "item": "twilitgourmet:maze_wafer_crust"
+        }
+      ]
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "item": "twilitgourmet:crab_meat"
+    },
+    {
+      "item": "twilitgourmet:crab_meat"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "twilitgourmet:crab_quiche"
+  }
+}

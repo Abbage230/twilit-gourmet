@@ -1,0 +1,139 @@
+{
+  "variants": {
+    "facing=east,slices=0": {
+      "model": "twilitgourmet:block/giant_apple_core",
+      "y": 90
+    },
+    "facing=east,slices=1": {
+      "model": "twilitgourmet:block/giant_apple_1_slice",
+      "y": 90
+    },
+    "facing=east,slices=2": {
+      "model": "twilitgourmet:block/giant_apple_2_slice",
+      "y": 90
+    },
+    "facing=east,slices=3": {
+      "model": "twilitgourmet:block/giant_apple_3_slice",
+      "y": 90
+    },
+    "facing=east,slices=4": {
+      "model": "twilitgourmet:block/giant_apple_4_slice",
+      "y": 90
+    },
+    "facing=east,slices=5": {
+      "model": "twilitgourmet:block/giant_apple_5_slice",
+      "y": 90
+    },
+    "facing=east,slices=6": {
+      "model": "twilitgourmet:block/giant_apple_6_slice",
+      "y": 90
+    },
+    "facing=east,slices=7": {
+      "model": "twilitgourmet:block/giant_apple_7_slice",
+      "y": 90
+    },
+    "facing=east,slices=8": {
+      "model": "twilitgourmet:block/giant_apple",
+      "y": 90
+    },
+    "facing=north,slices=0": {
+      "model": "twilitgourmet:block/giant_apple_core"
+    },
+    "facing=north,slices=1": {
+      "model": "twilitgourmet:block/giant_apple_1_slice"
+    },
+    "facing=north,slices=2": {
+      "model": "twilitgourmet:block/giant_apple_2_slice"
+    },
+    "facing=north,slices=3": {
+      "model": "twilitgourmet:block/giant_apple_3_slice"
+    },
+    "facing=north,slices=4": {
+      "model": "twilitgourmet:block/giant_apple_4_slice"
+    },
+    "facing=north,slices=5": {
+      "model": "twilitgourmet:block/giant_apple_5_slice"
+    },
+    "facing=north,slices=6": {
+      "model": "twilitgourmet:block/giant_apple_6_slice"
+    },
+    "facing=north,slices=7": {
+      "model": "twilitgourmet:block/giant_apple_7_slice"
+    },
+    "facing=north,slices=8": {
+      "model": "twilitgourmet:block/giant_apple"
+    },
+    "facing=south,slices=0": {
+      "model": "twilitgourmet:block/giant_apple_core",
+      "y": 180
+    },
+    "facing=south,slices=1": {
+      "model": "twilitgourmet:block/giant_apple_1_slice",
+      "y": 180
+    },
+    "facing=south,slices=2": {
+      "model": "twilitgourmet:block/giant_apple_2_slice",
+      "y": 180
+    },
+    "facing=south,slices=3": {
+      "model": "twilitgourmet:block/giant_apple_3_slice",
+      "y": 180
+    },
+    "facing=south,slices=4": {
+      "model": "twilitgourmet:block/giant_apple_4_slice",
+      "y": 180
+    },
+    "facing=south,slices=5": {
+      "model": "twilitgourmet:block/giant_apple_5_slice",
+      "y": 180
+    },
+    "facing=south,slices=6": {
+      "model": "twilitgourmet:block/giant_apple_6_slice",
+      "y": 180
+    },
+    "facing=south,slices=7": {
+      "model": "twilitgourmet:block/giant_apple_7_slice",
+      "y": 180
+    },
+    "facing=south,slices=8": {
+      "model": "twilitgourmet:block/giant_apple",
+      "y": 180
+    },
+    "facing=west,slices=0": {
+      "model": "twilitgourmet:block/giant_apple_core",
+      "y": 270
+    },
+    "facing=west,slices=1": {
+      "model": "twilitgourmet:block/giant_apple_1_slice",
+      "y": 270
+    },
+    "facing=west,slices=2": {
+      "model": "twilitgourmet:block/giant_apple_2_slice",
+      "y": 270
+    },
+    "facing=west,slices=3": {
+      "model": "twilitgourmet:block/giant_apple_3_slice",
+      "y": 270
+    },
+    "facing=west,slices=4": {
+      "model": "twilitgourmet:block/giant_apple_4_slice",
+      "y": 270
+    },
+    "facing=west,slices=5": {
+      "model": "twilitgourmet:block/giant_apple_5_slice",
+      "y": 270
+    },
+    "facing=west,slices=6": {
+      "model": "twilitgourmet:block/giant_apple_6_slice",
+      "y": 270
+    },
+    "facing=west,slices=7": {
+      "model": "twilitgourmet:block/giant_apple_7_slice",
+      "y": 270
+    },
+    "facing=west,slices=8": {
+      "model": "twilitgourmet:block/giant_apple",
+      "y": 270
+    }
+  }
+}

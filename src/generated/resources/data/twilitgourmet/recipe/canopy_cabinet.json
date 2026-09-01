@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "fd_cabinet",
+  "key": {
+    "D": {
+      "item": "twilightforest:canopy_trapdoor"
+    },
+    "_": {
+      "item": "twilightforest:canopy_slab"
+    }
+  },
+  "pattern": [
+    "___",
+    "D D",
+    "___"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twilitgourmet:canopy_cabinet"
+  }
+}

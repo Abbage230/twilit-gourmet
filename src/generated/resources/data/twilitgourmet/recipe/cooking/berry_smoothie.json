@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:drinks/milk"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "twilightforest:torchberries"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "count": 3,
+    "id": "twilitgourmet:berry_smoothie"
+  }
+}

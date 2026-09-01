@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "crab_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twilitgourmet:crab_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twilitgourmet:crab_meat_from_smoking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "crab_meat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twilitgourmet:crab_meat_from_smoking"
+    ]
+  }
+}

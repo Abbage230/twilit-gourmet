@@ -1,0 +1,58 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "item": "twilightforest:mangrove_door"
+        },
+        {
+          "item": "twilightforest:mangrove_trapdoor"
+        },
+        {
+          "item": "twilightforest:mangrove_sign"
+        },
+        {
+          "item": "twilightforest:mangrove_hanging_sign"
+        },
+        {
+          "item": "twilightforest:mangrove_fence"
+        },
+        {
+          "item": "twilightforest:mangrove_fence_gate"
+        },
+        {
+          "item": "twilightforest:mangrove_pressure_plate"
+        },
+        {
+          "item": "twilightforest:mangrove_button"
+        },
+        {
+          "item": "twilightforest:mangrove_boat"
+        },
+        {
+          "item": "twilitgourmet:mangrove_cabinet"
+        }
+      ]
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.75,
+      "item": {
+        "count": 1,
+        "id": "twilightforest:mangrove_planks"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:item_ability",
+      "action": "axe_dig"
+    },
+    {
+      "tag": "minecraft:axes"
+    }
+  ]
+}

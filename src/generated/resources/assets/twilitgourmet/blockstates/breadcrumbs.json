@@ -1,0 +1,44 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "twilitgourmet:block/breadcrumbs"
+      }
+    },
+    {
+      "apply": {
+        "model": "twilitgourmet:block/breadcrumbs_extension"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "twilitgourmet:block/breadcrumbs_extension",
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "twilitgourmet:block/breadcrumbs_extension",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "twilitgourmet:block/breadcrumbs_extension",
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    }
+  ]
+}

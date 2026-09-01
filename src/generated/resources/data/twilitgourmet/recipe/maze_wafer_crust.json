@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "m": {
+      "tag": "c:drinks/milk"
+    },
+    "w": {
+      "item": "twilightforest:maze_wafer"
+    }
+  },
+  "pattern": [
+    "wmw",
+    " w "
+  ],
+  "result": {
+    "count": 1,
+    "id": "twilitgourmet:maze_wafer_crust"
+  }
+}

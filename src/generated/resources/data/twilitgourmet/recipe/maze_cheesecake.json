@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "tg_maze_cheesecake",
+  "key": {
+    "M": {
+      "item": "twilitgourmet:maze_wafer_crust"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "T": {
+      "item": "twilightforest:torchberries"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    "WTW",
+    "SMS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twilitgourmet:maze_cheesecake"
+  }
+}

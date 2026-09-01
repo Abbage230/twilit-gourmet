@@ -1,0 +1,143 @@
+{
+  "parent": "minecraft:item/apple",
+  "base": {
+    "parent": "minecraft:item/generated",
+    "display": {
+      "firstperson_lefthand": {
+        "rotation": [
+          0,
+          90,
+          -25
+        ],
+        "scale": [
+          1.7,
+          1.7,
+          1.7
+        ],
+        "translation": [
+          1.13,
+          3.2,
+          1.13
+        ]
+      },
+      "firstperson_righthand": {
+        "rotation": [
+          0,
+          -90,
+          25
+        ],
+        "scale": [
+          1.7,
+          1.7,
+          1.7
+        ],
+        "translation": [
+          1.13,
+          3.2,
+          1.13
+        ]
+      },
+      "fixed": {
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          5,
+          5,
+          5
+        ]
+      },
+      "ground": {
+        "scale": [
+          2.5,
+          2.5,
+          2.5
+        ],
+        "translation": [
+          0,
+          2,
+          0
+        ]
+      },
+      "head": {
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          5,
+          5,
+          5
+        ],
+        "translation": [
+          0,
+          13,
+          7
+        ]
+      },
+      "thirdperson_lefthand": {
+        "scale": [
+          4.25,
+          4.25,
+          4.25
+        ],
+        "translation": [
+          -0.1,
+          28,
+          1.5
+        ]
+      },
+      "thirdperson_righthand": {
+        "scale": [
+          4.25,
+          4.25,
+          4.25
+        ],
+        "translation": [
+          -0.1,
+          28,
+          1.5
+        ]
+      }
+    },
+    "textures": {
+      "layer0": "minecraft:item/apple"
+    }
+  },
+  "loader": "neoforge:separate_transforms",
+  "perspectives": {
+    "gui": {
+      "elements": [
+        {
+          "faces": {
+            "south": {
+              "texture": "#all",
+              "uv": [
+                4.0,
+                4.0,
+                12.0,
+                12.0
+              ]
+            }
+          },
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            16,
+            0
+          ]
+        }
+      ],
+      "textures": {
+        "all": "minecraft:item/apple"
+      }
+    }
+  }
+}
