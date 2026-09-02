@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-28T09:56:31.471389778	Recipes
+// 1.21.1	2026-09-02T08:10:21.077961902	Recipes
 bdf4c4581a3355595e7111d200949e6527c51b39 data/farmersdelight/recipe/cutting/canopy_log.json
 5349a20a7d41bdb802466dc073459e1e783a9d77 data/farmersdelight/recipe/cutting/canopy_wood.json
 57f863af656e2b8bdab93c734a77d506f9078906 data/farmersdelight/recipe/cutting/dark_log.json
@@ -19,6 +19,9 @@ e41f26677fa13173b4ac338b8f6944498334c1ee data/twilightforest/advancement/recipes
 1b2b50d3f9af3064bbd54274d2a531b957c24ef0 data/twilightforest/advancement/recipes/cooking/shika_senbei.json
 b05d1f86775f83804c262e021969dad84df84699 data/twilightforest/recipe/cooking/maze_wafer.json
 72796915fb2497834d523d6a19d1c44015d7f3a7 data/twilightforest/recipe/cooking/shika_senbei.json
+3a2a49a74efa132d5376d065ffeff2bf44bb28ca data/twilightforest/recipe/cutting/cicada.json
+894147b249b9d6c62a99a0a8c3b3e1f5e00aca0e data/twilightforest/recipe/cutting/firefly.json
+f5218ff782caf0444188269b314a2def963c884a data/twilightforest/recipe/cutting/moonworm.json
 fc6e7129d6789fdd486e4c4e40c8d3e8c87333fc data/twilightforest/recipe/cutting/raw_meef.json
 d6b96c66abaa678be5e7b9413db17df9a89365a3 data/twilightforest/recipe/cutting/raw_venison.json
 b03303b230b132ee58d552895f05cbd5bbb61340 data/twilightforest/recipe/cutting/stale_bread.json

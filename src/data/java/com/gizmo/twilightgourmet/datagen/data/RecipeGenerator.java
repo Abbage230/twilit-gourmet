@@ -62,6 +62,10 @@ public class RecipeGenerator extends RecipeProvider {
 
 		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(GourmetBlocks.MUSHGLOOM_COLONY), CuttingRecipes.KNIVES, TFBlocks.MUSHGLOOM, 5).save(output);
 
+		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(TFBlocks.FIREFLY), CuttingRecipes.KNIVES, Items.GLOWSTONE).save(output);
+		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(TFBlocks.CICADA), CuttingRecipes.KNIVES, Items.GRAY_DYE).save(output);
+		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(TFBlocks.MOONWORM), CuttingRecipes.KNIVES, Items.LIME_DYE).save(output);
+
 		stripLogForBark(output, TFBlocks.TWILIGHT_OAK_LOG, TFBlocks.STRIPPED_TWILIGHT_OAK_LOG);
 		stripLogForBark(output, TFBlocks.TWILIGHT_OAK_WOOD, TFBlocks.STRIPPED_TWILIGHT_OAK_WOOD);
 		stripLogForBark(output, TFBlocks.CANOPY_LOG, TFBlocks.STRIPPED_CANOPY_LOG);
