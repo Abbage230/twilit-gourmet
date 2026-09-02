@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "twilightforest:dense_forest",
+    "twilightforest:firefly_forest"
+  ],
+  "features": "twilitgourmet:wild_onions",
+  "step": "vegetal_decoration"
+}

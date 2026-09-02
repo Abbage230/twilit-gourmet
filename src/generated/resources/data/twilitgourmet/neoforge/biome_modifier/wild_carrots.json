@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "twilightforest:clearing",
+    "twilightforest:forest"
+  ],
+  "features": "twilitgourmet:wild_carrots",
+  "step": "vegetal_decoration"
+}

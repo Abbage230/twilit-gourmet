@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "twilightforest:mushroom_forest",
+    "twilightforest:dense_mushroom_forest"
+  ],
+  "features": "twilitgourmet:red_mushroom_colony",
+  "step": "vegetal_decoration"
+}

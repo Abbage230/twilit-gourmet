@@ -4,10 +4,7 @@ import com.gizmo.twilightgourmet.datagen.assets.BlockStateGenerator;
 import com.gizmo.twilightgourmet.datagen.assets.ItemModelGenerator;
 import com.gizmo.twilightgourmet.datagen.assets.LangGenerator;
 import com.gizmo.twilightgourmet.datagen.assets.SoundGenerator;
-import com.gizmo.twilightgourmet.datagen.data.DataMapGenerator;
-import com.gizmo.twilightgourmet.datagen.data.LootGenerator;
-import com.gizmo.twilightgourmet.datagen.data.LootModifierGenerator;
-import com.gizmo.twilightgourmet.datagen.data.RecipeGenerator;
+import com.gizmo.twilightgourmet.datagen.data.*;
 import com.gizmo.twilightgourmet.datagen.data.tags.BlockTagGenerator;
 import com.gizmo.twilightgourmet.datagen.data.tags.ItemTagGenerator;
 import com.gizmo.twilitgourmet.TwilitGourmet;
@@ -38,7 +35,7 @@ public class DataGenerators {
 		generator.addProvider(event.includeClient(), new LangGenerator(output));
 		generator.addProvider(event.includeClient(), new SoundGenerator(output, helper));
 
-		var datapack = new DatapackBuiltinEntriesProvider(output, event.getLookupProvider(), new RegistrySetBuilder().add(TwilitGourmet.SYRUP_KEY, GourmetSyrups::bootstrap), Set.of("minecraft", TwilightForestMod.ID, FarmersDelight.MODID, TwilitGourmet.MODID));
+		var datapack = new RegistryDataGenerator(output, event.getLookupProvider());
 		var provider = datapack.getRegistryProvider();
 
 		generator.addProvider(event.includeServer(), datapack);

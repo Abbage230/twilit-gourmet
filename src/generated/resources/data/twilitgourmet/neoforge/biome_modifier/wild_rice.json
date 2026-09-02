@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "twilightforest:swamp",
+    "twilightforest:stream"
+  ],
+  "features": "twilitgourmet:wild_rice",
+  "step": "vegetal_decoration"
+}
