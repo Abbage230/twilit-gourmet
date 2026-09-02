@@ -38,7 +38,7 @@ public class ClientEvents {
 
 	private static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
 		event.register((state, getter, pos, index) -> {
-			if (getter != null && pos != null && getter.getBlockEntity(pos) instanceof SyrupHolder holder && holder.getSyrupKey() != null && index == 1) {
+			if (getter != null && pos != null && getter.getBlockEntity(pos) instanceof SyrupHolder holder && holder.getSyrupKey() != null && index == 0) {
 				return holder.getSyrup(Minecraft.getInstance().level.registryAccess()).color();
 			}
 			return -1;

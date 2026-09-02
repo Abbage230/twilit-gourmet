@@ -3,7 +3,6 @@ package com.gizmo.twilitgourmet.block.entity;
 import com.gizmo.twilitgourmet.Syrup;
 import com.gizmo.twilitgourmet.TwilitGourmet;
 import com.gizmo.twilitgourmet.init.GourmetBlocks;
-import com.gizmo.twilitgourmet.init.GourmetSyrups;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -17,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 public class SyrupCauldronBlockEntity extends BlockEntity implements SyrupHolder {
 
 	@Nullable
-	private ResourceKey<Syrup> syrup = GourmetSyrups.OAK;
+	private ResourceKey<Syrup> syrup;
 
 	public SyrupCauldronBlockEntity(BlockPos pos, BlockState state) {
 		super(GourmetBlocks.SYRUP_CAULDRON_BE.get(), pos, state);

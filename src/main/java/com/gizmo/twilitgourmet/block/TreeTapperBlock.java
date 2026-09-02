@@ -98,6 +98,9 @@ public class TreeTapperBlock extends HorizontalDirectionalBlock {
 					if (level.getBlockEntity(pos.below()) instanceof SyrupCauldronBlockEntity cauldron) {
 						cauldron.setSyrup(syrup);
 					}
+					//force tap to continue pouring after update.
+					//The block entity has not been updated properly by the time updateShape is called so it stops pouring after the first level is filled
+					level.setBlockAndUpdate(pos, state.setValue(POURING, true));
 				} else if (level.getBlockState(pos.below()).is(GourmetBlocks.SYRUP_CAULDRON) && level.getBlockState(pos.below()).getValue(LayeredCauldronBlock.LEVEL) < LayeredCauldronBlock.MAX_FILL_LEVEL) {
 					if (level.getBlockEntity(pos.below()) instanceof SyrupCauldronBlockEntity cauldron && cauldron.getSyrupKey() == syrup) {
 						level.setBlockAndUpdate(pos.below(), level.getBlockState(pos.below()).cycle(LayeredCauldronBlock.LEVEL));
