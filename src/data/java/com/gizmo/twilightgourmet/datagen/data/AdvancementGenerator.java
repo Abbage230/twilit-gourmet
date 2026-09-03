@@ -1,6 +1,8 @@
 package com.gizmo.twilightgourmet.datagen.data;
 
 import com.gizmo.twilitgourmet.TwilitGourmet;
+import com.gizmo.twilitgourmet.advancement.EatPancakeStacksTrigger;
+import com.gizmo.twilitgourmet.advancement.EatSlicesFromAppleTrigger;
 import com.gizmo.twilitgourmet.init.GourmetBlocks;
 import com.gizmo.twilitgourmet.init.GourmetDataComponents;
 import com.gizmo.twilitgourmet.init.GourmetItems;
@@ -12,7 +14,6 @@ import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -39,7 +40,7 @@ public class AdvancementGenerator extends AdvancementProvider {
 			var root = Advancement.Builder.advancement().display(GourmetBlocks.MUSHGLOOM_COLONY,
 							Component.translatable("advancement.twilitgourmet.root.title"),
 							Component.translatable("advancement.twilitgourmet.root.desc"),
-							TwilightForestMod.prefix("block/stripped_canopy_log.png"),
+							TwilightForestMod.prefix("textures/block/stripped_canopy_log.png"),
 							AdvancementType.TASK, false, false, false)
 					.addCriterion("has_root_tf_advancement", this.advancementTrigger("twilightforest:root"))
 					.addCriterion("has_root_fd_advancement", this.advancementTrigger("farmersdelight:main/root"))
@@ -53,19 +54,33 @@ public class AdvancementGenerator extends AdvancementProvider {
 					.addCriterion("step_on_me_daddy", EnterBlockTrigger.TriggerInstance.entersBlock(GourmetBlocks.BREADCRUMBS.get()))
 					.save(consumer, "twilitgourmet:follow_breadcrumbs");
 
-			Advancement.Builder.advancement().parent(root).display(new ItemStack(GourmetItems.SYRUP_BOTTLE, 1, DataComponentPatch.builder().set(GourmetDataComponents.SYRUP.get(), GourmetSyrups.SORTING).build()),
-							Component.translatable("advancement.twilitgourmet.collect_sryup.title"),
-							Component.translatable("advancement.twilitgourmet.collect_sryup.desc"),
+			var syrup = Advancement.Builder.advancement().parent(root).display(new ItemStack(GourmetItems.SYRUP_BOTTLE, 1, DataComponentPatch.builder().set(GourmetDataComponents.SYRUP.get(), GourmetSyrups.SORTING).build()),
+							Component.translatable("advancement.twilitgourmet.collect_syrup.title"),
+							Component.translatable("advancement.twilitgourmet.collect_syrup.desc"),
 							null, AdvancementType.TASK, true, true, false)
 					.addCriterion("collect_syrup", ItemUsedOnLocationTrigger.TriggerInstance.itemUsedOnBlock(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(GourmetBlocks.SYRUP_CAULDRON.get())), ItemPredicate.Builder.item().of(Items.GLASS_BOTTLE)))
 					.save(consumer, "twilitgourmet:collect_syrup");
 
-			Advancement.Builder.advancement().parent(root).display(new ItemStack(GourmetItems.SYRUP_BOTTLE, 1, DataComponentPatch.builder().set(GourmetDataComponents.SYRUP.get(), GourmetSyrups.SORTING).build()),
-							Component.translatable("advancement.twilitgourmet.collect_sryup.title"),
-							Component.translatable("advancement.twilitgourmet.collect_sryup.desc"),
+			Advancement.Builder.advancement().parent(syrup).display(GourmetItems.PANCAKE_STACK,
+							Component.translatable("advancement.twilitgourmet.eat_pancakes.title"),
+							Component.translatable("advancement.twilitgourmet.eat_pancakes.desc"),
+							null, AdvancementType.GOAL, true, true, false)
+					.addCriterion("finish_5_pancakes", EatPancakeStacksTrigger.TriggerInstance.eatenPancakeStacks(MinMaxBounds.Ints.exactly(5)))
+					.save(consumer, "twilitgourmet:eat_pancakes");
+
+			Advancement.Builder.advancement().parent(root).display(GourmetItems.APPLE_SLICE,
+							Component.translatable("advancement.twilitgourmet.eat_giant_apple.title"),
+							Component.translatable("advancement.twilitgourmet.eat_giant_apple.desc"),
 							null, AdvancementType.TASK, true, true, false)
-					.addCriterion("collect_syrup", ItemUsedOnLocationTrigger.TriggerInstance.itemUsedOnBlock(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(GourmetBlocks.SYRUP_CAULDRON.get())), ItemPredicate.Builder.item().of(Items.GLASS_BOTTLE)))
-					.save(consumer, "twilitgourmet:collect_syrup");
+					.addCriterion("eat_appl", EatSlicesFromAppleTrigger.TriggerInstance.eatenSlicesFromApple(MinMaxBounds.Ints.atLeast(8)))
+					.save(consumer, "twilitgourmet:eat_giant_apple");
+
+			Advancement.Builder.advancement().parent(root).display(GourmetItems.SHELL_HELMET,
+							Component.translatable("advancement.twilitgourmet.shell_helmet.title"),
+							Component.translatable("advancement.twilitgourmet.shell_helmet.desc"),
+							null, AdvancementType.CHALLENGE, true, true, true)
+					.addCriterion("make_shell_helmet", RecipeCraftedTrigger.TriggerInstance.craftedItem(TwilitGourmet.prefix("shell_helmet")))
+					.save(consumer, "twilitgourmet:shell_helmet");
 		}
 
 		private Criterion<PlayerTrigger.TriggerInstance> advancementTrigger(String name) {

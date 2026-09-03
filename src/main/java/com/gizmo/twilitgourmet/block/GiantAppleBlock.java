@@ -1,7 +1,7 @@
 package com.gizmo.twilitgourmet.block;
 
-import com.gizmo.twilitgourmet.init.GourmetFoods;
-import com.gizmo.twilitgourmet.init.GourmetItems;
+import com.gizmo.twilitgourmet.TGAdvancementTracker;
+import com.gizmo.twilitgourmet.init.*;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
@@ -123,9 +123,23 @@ public class GiantAppleBlock extends HorizontalDirectionalBlock {
 				}
 				level.gameEvent(player, GameEvent.EAT, pos);
 
-				if (player instanceof ServerPlayer) {
-					CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayer) player, new ItemStack(GourmetItems.APPLE_SLICE.get()));
-					player.awardStat(Stats.ITEM_USED.get(GourmetItems.APPLE_SLICE.get()));
+				if (player instanceof ServerPlayer sp) {
+					CriteriaTriggers.CONSUME_ITEM.trigger(sp, new ItemStack(GourmetItems.APPLE_SLICE.get()));
+
+					if (i != 0) {
+						player.awardStat(Stats.ITEM_USED.get(GourmetItems.APPLE_SLICE.get()));
+
+						TGAdvancementTracker tracker = player.getData(GourmetDataAttachments.ADVANCEMENT_TRACKER);
+						if (tracker.data.lastApplePos == null || !tracker.data.lastApplePos.equals(pos)) {
+							tracker.data.lastApplePos = pos;
+							tracker.data.slicesEaten = 1;
+						} else {
+							tracker.data.slicesEaten++;
+						}
+						player.setData(GourmetDataAttachments.ADVANCEMENT_TRACKER, tracker);
+
+						GourmetCriteriaTriggers.EAT_APPLE_SLICES.get().trigger(sp, tracker.data.slicesEaten);
+					}
 				}
 
 				return InteractionResult.sidedSuccess(level.isClientSide());

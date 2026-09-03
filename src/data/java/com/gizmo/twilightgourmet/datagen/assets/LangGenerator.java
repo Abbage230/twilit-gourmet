@@ -3,12 +3,29 @@ package com.gizmo.twilightgourmet.datagen.assets;
 import com.gizmo.twilitgourmet.TwilitGourmet;
 import com.gizmo.twilitgourmet.init.GourmetBlocks;
 import com.gizmo.twilitgourmet.init.GourmetItems;
+import com.google.common.collect.ImmutableList;
+import com.google.gson.JsonObject;
+import net.minecraft.data.CachedOutput;
+import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
+import twilightforest.TwilightForestMod;
+import twilightforest.data.helpers.LangConversionHelper;
+import twilightforest.data.helpers.LangFormatSplitter;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
 public class LangGenerator extends LanguageProvider {
+
+	private final PackOutput output;
+	public final Map<String, String> upsideDownEntries = new HashMap<>();
+
 	public LangGenerator(PackOutput output) {
 		super(output, TwilitGourmet.MODID, "en_us");
+		this.output = output;
 	}
 
 	@Override
@@ -94,5 +111,40 @@ public class LangGenerator extends LanguageProvider {
 		this.add("syrup.twilightforest.sorting", "Sortingwood Tree");
 
 		this.add("subtitles.twilitgourmet.item.crab_shell.crack", "Crab shell cracks");
+
+		this.addAdvancement("root", "Twilit Gourmet", "");
+		this.addAdvancement("follow_breadcrumbs", "Hole in my Pocket", "Follow a line of breadcrumbs");
+		this.addAdvancement("collect_syrup", "Arbor Industries", "Extract syrup from a tree");
+		this.addAdvancement("eat_pancakes", "Lumberjacks", "Eat five stacks of pancakes topped with different syrups");
+		this.addAdvancement("eat_giant_apple", "Checkups Begone", "Eat an entire giant apple slice by slice");
+		this.addAdvancement("shell_helmet", "Carcinization", "Evolve your helmet into a crab");
+	}
+
+	public void addAdvancement(String key, String title, String desc) {
+		this.add("advancement.twilitgourmet." + key + ".title", title);
+		this.add("advancement.twilitgourmet." + key + ".desc", desc);
+	}
+
+	@Override
+	public void add(String key, String value) {
+		super.add(key, value);
+		List<LangFormatSplitter.Component> splitEnglish = LangFormatSplitter.split(value);
+		this.upsideDownEntries.put(key, LangConversionHelper.convertComponents(splitEnglish));
+	}
+
+	@Override
+	public CompletableFuture<?> run(CachedOutput cache) {
+		//generate normal lang file
+		CompletableFuture<?> languageGen = super.run(cache);
+
+		ImmutableList.Builder<CompletableFuture<?>> futuresBuilder = new ImmutableList.Builder<>();
+		futuresBuilder.add(languageGen);
+
+		//generate en_ud file
+		JsonObject upsideDownFile = new JsonObject();
+		this.upsideDownEntries.forEach(upsideDownFile::addProperty);
+		futuresBuilder.add(DataProvider.saveStable(cache, upsideDownFile, this.output.getOutputFolder(PackOutput.Target.RESOURCE_PACK).resolve(TwilightForestMod.ID).resolve("lang").resolve("en_ud.json")));
+
+		return CompletableFuture.allOf(futuresBuilder.build().toArray(CompletableFuture[]::new));
 	}
 }

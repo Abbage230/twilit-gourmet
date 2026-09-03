@@ -1,0 +1,31 @@
+{
+  "parent": "twilitgourmet:root",
+  "criteria": {
+    "eat_appl": {
+      "conditions": {
+        "slices": {
+          "min": 8
+        }
+      },
+      "trigger": "twilightforest:eat_apple_slices"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.twilitgourmet.eat_giant_apple.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "twilitgourmet:apple_slice"
+    },
+    "title": {
+      "translate": "advancement.twilitgourmet.eat_giant_apple.title"
+    }
+  },
+  "requirements": [
+    [
+      "eat_appl"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "twilitgourmet:root",
+  "criteria": {
+    "step_on_me_daddy": {
+      "conditions": {
+        "block": "twilitgourmet:breadcrumbs"
+      },
+      "trigger": "minecraft:enter_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.twilitgourmet.follow_breadcrumbs.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "twilitgourmet:breadcrumbs"
+    },
+    "title": {
+      "translate": "advancement.twilitgourmet.follow_breadcrumbs.title"
+    }
+  },
+  "requirements": [
+    [
+      "step_on_me_daddy"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

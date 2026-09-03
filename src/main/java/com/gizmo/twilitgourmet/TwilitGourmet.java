@@ -33,6 +33,8 @@ public class TwilitGourmet {
 		GourmetArmorMaterials.ARMOR_MATERIALS.register(bus);
 		GourmetBlocks.BLOCKS.register(bus);
 		GourmetBlocks.BLOCK_ENTITIES.register(bus);
+		GourmetCriteriaTriggers.TRIGGERS.register(bus);
+		GourmetDataAttachments.ATTACHMENT_TYPES.register(bus);
 		GourmetItems.ITEMS.register(bus);
 		GourmetTabs.TABS.register(bus);
 		GourmetSounds.SOUNDS.register(bus);

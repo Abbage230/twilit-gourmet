@@ -1,0 +1,31 @@
+{
+  "parent": "twilitgourmet:root",
+  "criteria": {
+    "make_shell_helmet": {
+      "conditions": {
+        "recipe_id": "twilitgourmet:shell_helmet"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.twilitgourmet.shell_helmet.desc"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "twilitgourmet:shell_helmet"
+    },
+    "title": {
+      "translate": "advancement.twilitgourmet.shell_helmet.title"
+    }
+  },
+  "requirements": [
+    [
+      "make_shell_helmet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

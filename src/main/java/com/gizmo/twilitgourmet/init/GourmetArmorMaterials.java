@@ -18,10 +18,10 @@ public class GourmetArmorMaterials {
 	public static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(Registries.ARMOR_MATERIAL, TwilitGourmet.MODID);
 
 	public static final Holder<ArmorMaterial> SHELL = ARMOR_MATERIALS.register("shell", () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-		map.put(ArmorItem.Type.BOOTS, 2);
-		map.put(ArmorItem.Type.LEGGINGS, 5);
-		map.put(ArmorItem.Type.CHESTPLATE, 6);
-		map.put(ArmorItem.Type.HELMET, 2);
-		map.put(ArmorItem.Type.BODY, 5);
-	}), 15, SoundEvents.ARMOR_EQUIP_TURTLE, () -> Ingredient.of(GourmetItems.CRAB_SHELL_FRAGMENT), List.of(new ArmorMaterial.Layer(TwilitGourmet.prefix("shell"))), 0.0F, 0.0F));
+		map.put(ArmorItem.Type.BOOTS, 3);
+		map.put(ArmorItem.Type.LEGGINGS, 7);
+		map.put(ArmorItem.Type.CHESTPLATE, 9);
+		map.put(ArmorItem.Type.HELMET, 4);
+		map.put(ArmorItem.Type.BODY, 15);
+	}), 15, SoundEvents.ARMOR_EQUIP_TURTLE, () -> Ingredient.of(GourmetItems.CRAB_SHELL_FRAGMENT), List.of(new ArmorMaterial.Layer(TwilitGourmet.prefix("shell"))), 2.0F, 0.05F));
 }

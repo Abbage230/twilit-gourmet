@@ -1,0 +1,66 @@
+{
+  "criteria": {
+    "has_root_fd_advancement": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "advancements": {
+                  "farmersdelight:main/root": true
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:tick"
+    },
+    "has_root_tf_advancement": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "advancements": {
+                  "twilightforest:root": true
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "twilightforest:textures/block/stripped_canopy_log.png",
+    "description": {
+      "translate": "advancement.twilitgourmet.root.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "twilitgourmet:mushgloom_colony"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancement.twilitgourmet.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_root_tf_advancement"
+    ],
+    [
+      "has_root_fd_advancement"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

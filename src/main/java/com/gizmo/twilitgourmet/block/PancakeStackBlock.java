@@ -1,9 +1,8 @@
 package com.gizmo.twilitgourmet.block;
 
+import com.gizmo.twilitgourmet.TGAdvancementTracker;
 import com.gizmo.twilitgourmet.block.entity.PancakeStackBlockEntity;
-import com.gizmo.twilitgourmet.init.GourmetDataComponents;
-import com.gizmo.twilitgourmet.init.GourmetFoods;
-import com.gizmo.twilitgourmet.init.GourmetItems;
+import com.gizmo.twilitgourmet.init.*;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
@@ -100,7 +99,11 @@ public class PancakeStackBlock extends BaseEntityBlock {
 	@Override
 	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
 		int i = state.getValue(PANCAKES);
-		if (i > 0 && player.canEat(false)) {
+		if (i == 0) {
+			level.playSound(null, pos, SoundEvents.WOOD_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
+			level.destroyBlock(pos, true);
+			return InteractionResult.SUCCESS;
+		} else if (player.canEat(false)) {
 			boolean syrup = state.getValue(SYRUP);
 			int pancakeHunger = GourmetFoods.PANCAKE.nutrition();
 			float pancakeSat = GourmetFoods.PANCAKE.saturation();
@@ -116,8 +119,15 @@ public class PancakeStackBlock extends BaseEntityBlock {
 			level.playSound(null, pos, SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 0.5F, level.getRandom().nextFloat() * 0.1F + 0.9F);
 			level.gameEvent(player, GameEvent.EAT, pos);
 
-			if (player instanceof ServerPlayer) {
-				CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayer) player, new ItemStack(GourmetItems.PANCAKE.get()));
+			if (player instanceof ServerPlayer sp) {
+				if (i == 1 && state.getValue(SYRUP)) {
+					TGAdvancementTracker tracker = player.getData(GourmetDataAttachments.ADVANCEMENT_TRACKER);
+					tracker.syrupPancakeStacksEaten++;
+					player.setData(GourmetDataAttachments.ADVANCEMENT_TRACKER, tracker);
+					GourmetCriteriaTriggers.EAT_PANCAKE_STACKS.get().trigger(sp, tracker.syrupPancakeStacksEaten);
+				}
+
+				CriteriaTriggers.CONSUME_ITEM.trigger(sp, new ItemStack(GourmetItems.PANCAKE.get()));
 				player.awardStat(Stats.ITEM_USED.get(GourmetItems.PANCAKE.get()));
 			}
 

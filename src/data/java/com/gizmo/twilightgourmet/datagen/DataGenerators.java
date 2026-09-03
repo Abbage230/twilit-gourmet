@@ -39,6 +39,7 @@ public class DataGenerators {
 		var provider = datapack.getRegistryProvider();
 
 		generator.addProvider(event.includeServer(), datapack);
+		generator.addProvider(event.includeServer(), new AdvancementGenerator(output, provider, helper));
 		generator.addProvider(event.includeServer(), new DataMapGenerator(output, provider));
 		generator.addProvider(event.includeServer(), new LootGenerator(output, provider));
 		generator.addProvider(event.includeServer(), new LootModifierGenerator(output, provider));

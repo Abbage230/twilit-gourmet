@@ -1,0 +1,47 @@
+{
+  "parent": "twilitgourmet:root",
+  "criteria": {
+    "collect_syrup": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "twilitgourmet:syrup_cauldron"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "minecraft:glass_bottle"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.twilitgourmet.collect_syrup.desc"
+    },
+    "icon": {
+      "components": {
+        "twilitgourmet:syrup": "twilightforest:sorting"
+      },
+      "count": 1,
+      "id": "twilitgourmet:syrup_bottle"
+    },
+    "title": {
+      "translate": "advancement.twilitgourmet.collect_syrup.title"
+    }
+  },
+  "requirements": [
+    [
+      "collect_syrup"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

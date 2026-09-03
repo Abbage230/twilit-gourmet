@@ -1,0 +1,30 @@
+{
+  "parent": "twilitgourmet:collect_syrup",
+  "criteria": {
+    "finish_5_pancakes": {
+      "conditions": {
+        "stacks": 5
+      },
+      "trigger": "twilightforest:eat_pancake_stacks"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.twilitgourmet.eat_pancakes.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "twilitgourmet:pancake_stack"
+    },
+    "title": {
+      "translate": "advancement.twilitgourmet.eat_pancakes.title"
+    }
+  },
+  "requirements": [
+    [
+      "finish_5_pancakes"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
