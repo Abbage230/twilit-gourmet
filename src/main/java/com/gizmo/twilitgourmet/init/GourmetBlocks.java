@@ -48,6 +48,7 @@ public class GourmetBlocks {
 	public static final DeferredBlock<Block> PANCAKE_STACK = BLOCKS.register("pancake_stack", () -> new PancakeStackBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE)));
 	public static final DeferredBlock<Block> COOKED_CRAB = BLOCKS.register("cooked_crab", () -> new CookedCrabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE).sound(SoundType.ROOTS)));
 	public static final DeferredBlock<Block> MAZE_CHEESECAKE = BLOCKS.register("maze_cheesecake", () -> new PieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE), GourmetItems.MAZE_CHEESECAKE_SLICE));
+	public static final DeferredBlock<Block> CREMESCHNITTE = BLOCKS.register("cremeschnitte", () -> new PieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE), GourmetItems.CREMESCHNITTE_SLICE));
 	public static final DeferredBlock<Block> CRAB_QUICHE = BLOCKS.register("crab_quiche", () -> new PieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE), GourmetItems.CRAB_QUICHE_SLICE));
 	public static final DeferredBlock<Block> CRAB_CAKES = BLOCKS.register("crab_cakes", () -> new FeastBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE), GourmetItems.CRAB_CAKE, true));
 

@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-02T19:11:40.192644752	Loot Tables
+// 1.21.1	2026-09-03T06:51:17.274317388	Loot Tables
 18e7d4aeed1fd0f4e9944d011268c8f7cda81a7c data/twilightforest/loot_table/entities/boar.json
 cb4abd984e93c771cdc4f912c099bdfa0c4a3e08 data/twilightforest/loot_table/entities/helmet_crab.json
 0f31a7bb2069189939b4763b8004d51a8ad0dfa7 data/twilitgourmet/loot_table/blocks/breadcrumbs.json
@@ -6,6 +6,7 @@ cb4abd984e93c771cdc4f912c099bdfa0c4a3e08 data/twilightforest/loot_table/entities
 5717cdcd5aa1b4e5f1573ec006d4471cb211566e data/twilitgourmet/loot_table/blocks/cooked_crab.json
 ba1dcfee9dab1d908f14af2af13c29826fb43a04 data/twilitgourmet/loot_table/blocks/crab_cakes.json
 af38413115eabd2a51c25f5a6f9fc341f2b8da3b data/twilitgourmet/loot_table/blocks/crab_quiche.json
+4a806d37fbcbc05847ae0772ac00902271f9e038 data/twilitgourmet/loot_table/blocks/cremeschnitte.json
 da60d054e3b77bbc6a6043076d82784158179556 data/twilitgourmet/loot_table/blocks/dark_cabinet.json
 a378cd15a72fb69be840b814c273912c9ad6ccc9 data/twilitgourmet/loot_table/blocks/giant_apple.json
 44109eac42f76e039995da9c6c7652f4c7e4d0d5 data/twilitgourmet/loot_table/blocks/mangrove_cabinet.json

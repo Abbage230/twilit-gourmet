@@ -45,6 +45,8 @@ public class GourmetItems {
 	public static final DeferredItem<Item> MAZE_WAFER_CRUST = ITEMS.register("maze_wafer_crust", () -> new Item(new Item.Properties().food(FoodValues.PIE_CRUST)));
 	public static final DeferredItem<Item> MAZE_CHEESECAKE = ITEMS.register("maze_cheesecake", () -> new PlaceableItem(GourmetBlocks.MAZE_CHEESECAKE.get(), new Item.Properties()));
 	public static final DeferredItem<Item> MAZE_CHEESECAKE_SLICE = ITEMS.register("maze_cheesecake_slice", () -> new ConsumableItem(new Item.Properties().food(FoodValues.PIE_SLICE)));
+	public static final DeferredItem<Item> CREMESCHNITTE = ITEMS.register("cremeschnitte", () -> new PlaceableItem(GourmetBlocks.CREMESCHNITTE.get(), new Item.Properties()));
+	public static final DeferredItem<Item> CREMESCHNITTE_SLICE = ITEMS.register("cremeschnitte_slice", () -> new ConsumableItem(new Item.Properties().food(FoodValues.PIE_SLICE)));
 
 	//crab things
 	public static final DeferredItem<Item> CRAB_SHELL_FRAGMENT = ITEMS.register("crab_shell_fragment", () -> new Item(new Item.Properties()));
@@ -53,6 +55,7 @@ public class GourmetItems {
 	public static final DeferredItem<Item> SHELL_HELMET = ITEMS.register("shell_helmet", () -> new ArmorItem(GourmetArmorMaterials.SHELL, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(20))));
 	public static final DeferredItem<Item> CRAB_MEAT = ITEMS.register("crab_meat", () -> new Item(new Item.Properties().food(GourmetFoods.CRAB_MEAT)));
 	public static final DeferredItem<Item> COOKED_CRAB_MEAT = ITEMS.register("cooked_crab_meat", () -> new Item(new Item.Properties().food(GourmetFoods.COOKED_CRAB_MEAT)));
+	public static final DeferredItem<Item> CRAB_JERKY = ITEMS.register("crab_jerky", () -> new Item(new Item.Properties().food(GourmetFoods.CRAB_JERKY)));
 	public static final DeferredItem<Item> WHOLE_CRAB = ITEMS.register("whole_crab", () -> new Item(new Item.Properties()));
 	public static final DeferredItem<Item> COOKED_CRAB = ITEMS.register("cooked_crab", () -> new PlaceableItem(GourmetBlocks.COOKED_CRAB.get(), new Item.Properties()));
 	public static final DeferredItem<Item> CRAB_CAKES = ITEMS.register("crab_cakes", () -> new PlaceableItem(GourmetBlocks.CRAB_CAKES.get(), new Item.Properties()));

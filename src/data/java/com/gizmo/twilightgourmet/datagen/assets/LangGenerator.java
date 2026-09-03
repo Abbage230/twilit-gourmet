@@ -48,6 +48,7 @@ public class LangGenerator extends LanguageProvider {
 		this.addBlock(GourmetBlocks.COOKED_CRAB, "Cooked Crab");
 		this.add("block.twilitgourmet.cooked_crab.use_knife", "You need to use a knife to cut this up");
 		this.addBlock(GourmetBlocks.MAZE_CHEESECAKE, "Maze Cheesecake");
+		this.addBlock(GourmetBlocks.CREMESCHNITTE, "Cremeschnitte");
 		this.addBlock(GourmetBlocks.BREADCRUMBS, "Breadcrumbs");
 
 		this.addItem(GourmetItems.APPLE_SLICE, "Apple Slice");
@@ -68,6 +69,7 @@ public class LangGenerator extends LanguageProvider {
 		this.addItem(GourmetItems.COOKED_BOARKCHOP, "Cooked Boarkchop");
 		this.addItem(GourmetItems.CRAB_MEAT, "Crab Meat");
 		this.addItem(GourmetItems.COOKED_CRAB_MEAT, "Cooked Crab Meat");
+		this.addItem(GourmetItems.CRAB_JERKY, "Crab Jerky");
 		this.addItem(GourmetItems.CRAB_SHELL_FRAGMENT, "Crab Shell Fragment");
 		this.addItem(GourmetItems.CRAB_LEG, "Crab Leg");
 		this.addItem(GourmetItems.CRAB_CLAW, "Crab Claw");

@@ -22,12 +22,14 @@ import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.crafting.DataComponentIngredient;
+import twilightforest.data.custom.DryingRecipeBuilder;
 import twilightforest.data.tags.ItemTagGenerator;
 import twilightforest.init.TFBlocks;
 import twilightforest.init.TFItems;
 import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.CommonTags;
+import vectorwing.farmersdelight.common.tag.ModTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 import vectorwing.farmersdelight.data.recipe.CookingRecipes;
@@ -47,6 +49,10 @@ public class RecipeGenerator extends RecipeProvider {
 		foodSmeltingRecipes("meef_patty", GourmetItems.MINCED_MEEF, GourmetItems.MEEF_PATTY, 0.35F, output);
 		foodSmeltingRecipes("crab_meat", GourmetItems.CRAB_MEAT, GourmetItems.COOKED_CRAB_MEAT, 0.35F, output);
 		foodSmeltingRecipes("cooked_boarkchop", GourmetItems.RAW_BOARKCHOP, GourmetItems.COOKED_BOARKCHOP, 0.35F, output);
+
+		DryingRecipeBuilder.drying(GourmetItems.CRAB_MEAT, GourmetItems.CRAB_JERKY)
+				.unlockedBy("has_meat", has(GourmetItems.CRAB_MEAT))
+				.save(output);
 
 		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(TFItems.RAW_MEEF), CuttingRecipes.KNIVES, GourmetItems.MINCED_MEEF, 2).save(output);
 		CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(TFItems.RAW_VENISON), CuttingRecipes.KNIVES, GourmetItems.GROUND_VENISON, 2).save(output);
@@ -357,6 +363,25 @@ public class RecipeGenerator extends RecipeProvider {
 				.unlockedBy("has_slice", has(GourmetItems.MAZE_CHEESECAKE_SLICE))
 				.group("tg_maze_cheesecake")
 				.save(output, TwilitGourmet.prefix("maze_cheesecake_from_slices"));
+
+		ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, GourmetItems.CREMESCHNITTE)
+				.pattern("SMS")
+				.pattern("EWE")
+				.define('E', Tags.Items.EGGS)
+				.define('M', Tags.Items.DRINKS_MILK)
+				.define('S', Items.SUGAR)
+				.define('W', GourmetItems.MAZE_WAFER_CRUST)
+				.unlockedBy("has_crust", has(GourmetItems.MAZE_WAFER_CRUST))
+				.group("tg_cremeschnitte")
+				.save(output);
+
+		ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, GourmetItems.CREMESCHNITTE)
+				.pattern("SS")
+				.pattern("SS")
+				.define('S', GourmetItems.CREMESCHNITTE_SLICE)
+				.unlockedBy("has_slice", has(GourmetItems.CREMESCHNITTE_SLICE))
+				.group("tg_cremeschnitte")
+				.save(output, TwilitGourmet.prefix("cremeschnitte_from_slices"));
 
 		ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, GourmetItems.VENISON_KEBAB, 2)
 				.requires(Items.STICK, 2)

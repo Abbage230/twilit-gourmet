@@ -107,6 +107,7 @@ public class BlockLootTables extends BlockLootSubProvider {
 								.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FeastBlock.SERVINGS, 6)).invert())));
 
 		this.add(GourmetBlocks.MAZE_CHEESECAKE.get(), LootTable.lootTable());
+		this.add(GourmetBlocks.CREMESCHNITTE.get(), LootTable.lootTable());
 		this.add(GourmetBlocks.CRAB_QUICHE.get(), LootTable.lootTable());
 		this.dropWhenSilkTouch(GourmetBlocks.BREADCRUMBS.get());
 	}

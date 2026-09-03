@@ -41,8 +41,9 @@ public class BlockStateGenerator extends BlockStateProvider {
 		this.cabinetBlock(GourmetBlocks.MINING_CABINET);
 		this.cabinetBlock(GourmetBlocks.SORTING_CABINET);
 
-		this.pieBlock(GourmetBlocks.MAZE_CHEESECAKE, true);
-		this.pieBlock(GourmetBlocks.CRAB_QUICHE, false);
+		this.pieBlock(GourmetBlocks.MAZE_CHEESECAKE, TwilitGourmet.prefix("block/maze_crust_side"), TwilitGourmet.prefix("block/maze_crust_bottom"));
+		this.pieBlock(GourmetBlocks.CRAB_QUICHE, ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "block/pie_side"), ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "block/pie_bottom"));
+		this.pieBlock(GourmetBlocks.CREMESCHNITTE, TwilitGourmet.prefix("block/cremeschnitte_side"), TwilitGourmet.prefix("block/maze_crust_bottom"));
 
 		this.getVariantBuilder(GourmetBlocks.GIANT_APPLE.get()).forAllStates(state -> {
 			int slices = state.getValue(GiantAppleBlock.SLICES);
@@ -91,27 +92,27 @@ public class BlockStateGenerator extends BlockStateProvider {
 		this.simpleBlockItem(block.get(), this.models().getExistingFile(this.blockTexture(block.get())));
 	}
 
-	public void pieBlock(DeferredBlock<Block> block, boolean mazeCrust) {
+	public void pieBlock(DeferredBlock<Block> block, ResourceLocation side, ResourceLocation bottom) {
 		this.getVariantBuilder(block.get()).forAllStates(state -> {
 			int bites = state.getValue(PieBlock.BITES);
 			return ConfiguredModel.builder()
-					.modelFile(bites > 0 ? this.modelPieSlice(block.getId().getPath(), bites, mazeCrust) : this.modelPie(block.getId().getPath(), mazeCrust))
+					.modelFile(bites > 0 ? this.modelPieSlice(block.getId().getPath(), bites, side, bottom) : this.modelPie(block.getId().getPath(), side, bottom))
 					.rotationY(((int) state.getValue(PieBlock.FACING).toYRot() + 180) % 360)
 					.build();
 		});
 	}
 
-	private ModelFile modelPie(String baseName, boolean mazeCrust) {
+	private ModelFile modelPie(String baseName, ResourceLocation side, ResourceLocation bottom) {
 		return this.models().getBuilder(baseName).parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "block/template_pie")))
-				.texture("bottom", mazeCrust ? prefix("block/maze_crust_bottom") : ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "block/pie_bottom"))
-				.texture("side", mazeCrust ? prefix("block/maze_crust_side") : ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "block/pie_side"))
+				.texture("bottom", bottom)
+				.texture("side", side)
 				.texture("top", prefix("block/" + baseName + "_top"));
 	}
 
-	private ModelFile modelPieSlice(String baseName, int bites, boolean mazeCrust) {
+	private ModelFile modelPieSlice(String baseName, int bites, ResourceLocation side, ResourceLocation bottom) {
 		return this.models().getBuilder(baseName + "_slice" + bites).parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "block/template_pie_slice" + bites)))
-				.texture("bottom", mazeCrust ? prefix("block/maze_crust_bottom") : ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "block/pie_bottom"))
-				.texture("side", mazeCrust ? prefix("block/maze_crust_side") : ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "block/pie_side"))
+				.texture("bottom", bottom)
+				.texture("side", side)
 				.texture("inner", prefix("block/" + baseName + "_inner"))
 				.texture("top", prefix("block/" + baseName + "_top"));
 	}

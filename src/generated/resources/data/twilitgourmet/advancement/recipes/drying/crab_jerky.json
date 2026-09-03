@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twilitgourmet:crab_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twilitgourmet:crab_jerky"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_meat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twilitgourmet:crab_jerky"
+    ]
+  }
+}

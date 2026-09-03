@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "tg_cremeschnitte",
+  "key": {
+    "E": {
+      "tag": "c:eggs"
+    },
+    "M": {
+      "tag": "c:drinks/milk"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "W": {
+      "item": "twilitgourmet:maze_wafer_crust"
+    }
+  },
+  "pattern": [
+    "SMS",
+    "EWE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twilitgourmet:cremeschnitte"
+  }
+}

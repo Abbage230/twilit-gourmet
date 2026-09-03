@@ -18,6 +18,7 @@ public class GourmetFoods {
 	public static final FoodProperties MEEF_PATTY = new FoodProperties.Builder().nutrition(4).saturationModifier(0.8F).fast().build();
 	public static final FoodProperties CRAB_MEAT = new FoodProperties.Builder().nutrition(2).saturationModifier(0.2F).fast().build();
 	public static final FoodProperties COOKED_CRAB_MEAT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.5F).fast().build();
+	public static final FoodProperties CRAB_JERKY = new FoodProperties.Builder().nutrition(4).saturationModifier(1.075F).build();
 	public static final FoodProperties VENISON_KEBAB = new FoodProperties.Builder().nutrition(8).saturationModifier(0.6F).build();
 	public static final FoodProperties VENISON_SLIDER = new FoodProperties.Builder().nutrition(11).saturationModifier(0.6F).build();
 	public static final FoodProperties CRAB_CAKE = new FoodProperties.Builder().nutrition(6).saturationModifier(0.6F).effect(() -> FoodValues.nourishment(3600), 1.0F).build();

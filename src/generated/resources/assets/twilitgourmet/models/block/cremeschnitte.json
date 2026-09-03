@@ -1,0 +1,8 @@
+{
+  "parent": "farmersdelight:block/template_pie",
+  "textures": {
+    "bottom": "twilitgourmet:block/maze_crust_bottom",
+    "side": "twilitgourmet:block/cremeschnitte_side",
+    "top": "twilitgourmet:block/cremeschnitte_top"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twilitgourmet:maze_wafer_crust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twilitgourmet:cremeschnitte"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twilitgourmet:cremeschnitte"
+    ]
+  }
+}

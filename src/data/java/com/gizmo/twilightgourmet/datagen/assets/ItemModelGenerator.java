@@ -54,6 +54,7 @@ public class ItemModelGenerator extends ItemModelProvider {
 		this.singleTex(GourmetItems.SHELL_HELMET);
 		this.singleTex(GourmetItems.CRAB_MEAT);
 		this.singleTex(GourmetItems.COOKED_CRAB_MEAT);
+		this.singleTex(GourmetItems.CRAB_JERKY);
 		this.singleTex(GourmetItems.WHOLE_CRAB);
 		this.singleTex(GourmetItems.COOKED_CRAB);
 		this.singleTex(GourmetItems.CRAB_CAKE);
@@ -62,6 +63,8 @@ public class ItemModelGenerator extends ItemModelProvider {
 		this.singleTex(GourmetItems.CRAB_QUICHE_SLICE);
 		this.singleTex(GourmetItems.MAZE_CHEESECAKE);
 		this.singleTex(GourmetItems.MAZE_CHEESECAKE_SLICE);
+		this.singleTex(GourmetItems.CREMESCHNITTE);
+		this.singleTex(GourmetItems.CREMESCHNITTE_SLICE);
 		this.singleTex(GourmetItems.PANCAKE);
 		this.singleTex(GourmetItems.PANCAKE_STACK);
 		//I dont use the block textures here due to the soil darkening.

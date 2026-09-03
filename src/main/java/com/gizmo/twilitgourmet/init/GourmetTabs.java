@@ -61,6 +61,8 @@ public class GourmetTabs {
 				output.accept(GourmetItems.MAZE_WAFER_CRUST);
 				output.accept(GourmetItems.MAZE_CHEESECAKE);
 				output.accept(GourmetItems.MAZE_CHEESECAKE_SLICE);
+				output.accept(GourmetItems.CREMESCHNITTE);
+				output.accept(GourmetItems.CREMESCHNITTE_SLICE);
 
 				output.accept(GourmetItems.CRAB_SHELL_FRAGMENT);
 				output.accept(GourmetItems.CRAB_LEG);
@@ -69,6 +71,7 @@ public class GourmetTabs {
 				output.accept(GourmetItems.COOKED_CRAB);
 				output.accept(GourmetItems.CRAB_MEAT);
 				output.accept(GourmetItems.COOKED_CRAB_MEAT);
+				output.accept(GourmetItems.CRAB_JERKY);
 				output.accept(GourmetItems.CRAB_CAKES);
 				output.accept(GourmetItems.CRAB_CAKE);
 				output.accept(GourmetItems.CRAB_QUICHE);
