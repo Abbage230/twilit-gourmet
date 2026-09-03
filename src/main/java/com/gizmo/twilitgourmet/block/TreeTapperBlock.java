@@ -4,11 +4,13 @@ import com.gizmo.twilitgourmet.Syrup;
 import com.gizmo.twilitgourmet.TwilitGourmet;
 import com.gizmo.twilitgourmet.block.entity.SyrupCauldronBlockEntity;
 import com.gizmo.twilitgourmet.init.GourmetBlocks;
+import com.gizmo.twilitgourmet.init.GourmetSyrups;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -78,8 +80,18 @@ public class TreeTapperBlock extends HorizontalDirectionalBlock {
 		return null;
 	}
 
-	private static boolean arePouringConditionsMet(LevelAccessor level, BlockPos pos, Direction tapFacing) {
-		ResourceKey<Syrup> syrup = level.getBlockState(pos.relative(tapFacing.getOpposite())).getBlock().builtInRegistryHolder().getData(TwilitGourmet.SYRUP_DATA_MAP);
+	@Nullable
+	public static ResourceKey<Syrup> getSyrup(BlockGetter getter, BlockPos pos, Direction facing) {
+		BlockState log = getter.getBlockState(pos.relative(facing.getOpposite()));
+		ResourceKey<Syrup> syrup = log.getBlock().builtInRegistryHolder().getData(TwilitGourmet.SYRUP_DATA_MAP);
+		if (syrup == null && log.is(BlockTags.LOGS)) {
+			syrup = GourmetSyrups.FALLBACK;
+		}
+		return syrup;
+	}
+
+	private static boolean arePouringConditionsMet(BlockGetter level, BlockPos pos, Direction tapFacing) {
+		ResourceKey<Syrup> syrup = getSyrup(level, pos, tapFacing);
 		if (syrup == null) return false;
 		if (level.getBlockState(pos.below()).is(GourmetBlocks.SYRUP_CAULDRON)) {
 			return level.getBlockState(pos.below()).getValue(LayeredCauldronBlock.LEVEL) < LayeredCauldronBlock.MAX_FILL_LEVEL && level.getBlockEntity(pos.below()) instanceof SyrupCauldronBlockEntity cauldron && cauldron.getSyrupKey() == syrup;
@@ -91,7 +103,7 @@ public class TreeTapperBlock extends HorizontalDirectionalBlock {
 	@Override
 	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
 		if (state.getValue(POURING)) {
-			ResourceKey<Syrup> syrup = level.getBlockState(pos.relative(state.getValue(FACING).getOpposite())).getBlock().builtInRegistryHolder().getData(TwilitGourmet.SYRUP_DATA_MAP);
+			ResourceKey<Syrup> syrup = getSyrup(level, pos, state.getValue(FACING));
 			if (syrup != null && random.nextFloat() <= level.registryAccess().registryOrThrow(TwilitGourmet.SYRUP_KEY).getOrThrow(syrup).chance()) {
 				if (level.getBlockState(pos.below()).is(Blocks.CAULDRON)) {
 					level.setBlockAndUpdate(pos.below(), GourmetBlocks.SYRUP_CAULDRON.get().defaultBlockState());

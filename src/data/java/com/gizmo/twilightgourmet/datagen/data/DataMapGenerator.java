@@ -11,6 +11,7 @@ import net.neoforged.neoforge.common.data.DataMapProvider;
 import net.neoforged.neoforge.registries.datamaps.builtin.Compostable;
 import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 import twilightforest.data.tags.BlockTagGenerator;
+import twilightforest.init.TFBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -40,6 +41,7 @@ public class DataMapGenerator extends DataMapProvider {
 
 		var syrups = this.builder(TwilitGourmet.SYRUP_DATA_MAP);
 		syrups.add(BlockTags.OAK_LOGS, GourmetSyrups.OAK, false);
+		syrups.add(TFBlocks.GIANT_LOG, GourmetSyrups.OAK, false);
 		syrups.add(BlockTags.SPRUCE_LOGS, GourmetSyrups.SPRUCE, false);
 		syrups.add(BlockTags.BIRCH_LOGS, GourmetSyrups.BIRCH, false);
 		syrups.add(BlockTags.JUNGLE_LOGS, GourmetSyrups.JUNGLE, false);

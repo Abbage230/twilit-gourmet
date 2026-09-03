@@ -1,0 +1,13 @@
+{
+  "color": -4614824,
+  "effect": {
+    "duration": 450,
+    "id": "minecraft:speed",
+    "neoforge:cures": [
+      "milk",
+      "protected_by_totem"
+    ],
+    "show_icon": true
+  },
+  "fill_chance_on_random_tick": 0.125
+}

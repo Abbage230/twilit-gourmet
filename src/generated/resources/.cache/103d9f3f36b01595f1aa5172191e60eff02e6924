@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-02T17:17:14.682675079	Registries
+// 1.21.1	2026-09-02T19:13:15.174410505	Registries
 3e638fa1dd67cf4b6cc119b404ca218056eedd57 data/minecraft/twilitgourmet/syrups/acacia.json
 571a041d330b2ec042f66ea08e63dd38ba9abd39 data/minecraft/twilitgourmet/syrups/birch.json
 d09508d64238f76b5a167f2e41bcbeb1de4fb58c data/minecraft/twilitgourmet/syrups/cherry.json
@@ -24,6 +24,7 @@ d9425b2392bf03c82e57de0621ef98eb1b345bfc data/twilitgourmet/neoforge/biome_modif
 95ea0d03a9a3995f0d9f5a96c593e668939c4c0b data/twilitgourmet/neoforge/biome_modifier/wild_potatoes.json
 d8cef6cdfffcd32f9fa0017d44fba27276ea3a7f data/twilitgourmet/neoforge/biome_modifier/wild_rice.json
 a679509187a9039f0dbc846ecf3854dd420a6aaf data/twilitgourmet/neoforge/biome_modifier/wild_tomatoes.json
+46ee472e934c2056b2c6d6b10ac890bd75ab601b data/twilitgourmet/twilitgourmet/syrups/fallback.json
 f2223a827dc2d1f6f025c6a7fc741c84c6092537 data/twilitgourmet/worldgen/placed_feature/brown_mushroom_colony.json
 2d3c27fbd02ab2956a0304535caf96be1622fec8 data/twilitgourmet/worldgen/placed_feature/red_mushroom_colony.json
 ffb8fd07568d909119a547118e4029fa1a4cb3f7 data/twilitgourmet/worldgen/placed_feature/wild_carrots.json

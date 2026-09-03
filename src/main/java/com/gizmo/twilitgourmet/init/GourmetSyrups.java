@@ -31,6 +31,8 @@ public class GourmetSyrups {
 	public static final ResourceKey<Syrup> MINING = makeKey(TwilightForestMod.prefix("mining"));
 	public static final ResourceKey<Syrup> SORTING = makeKey(TwilightForestMod.prefix("sorting"));
 
+	public static final ResourceKey<Syrup> FALLBACK = makeKey(TwilitGourmet.prefix("fallback"));
+
 	private static ResourceKey<Syrup> makeKey(ResourceLocation name) {
 		return ResourceKey.create(TwilitGourmet.SYRUP_KEY, name);
 	}
@@ -55,5 +57,7 @@ public class GourmetSyrups {
 		context.register(TRANSFORMATION, new Syrup(0.125F, 0xFF887556, new MobEffectInstance(MobEffects.DAMAGE_BOOST, 900)));
 		context.register(MINING, new Syrup(0.125F, 0xFFb59b7a, new MobEffectInstance(MobEffects.DIG_SPEED, 900)));
 		context.register(SORTING, new Syrup(0.125F, 0xFF61401c, new MobEffectInstance(MobEffects.INVISIBILITY, 900)));
+
+		context.register(FALLBACK, new Syrup(0.125F, 0xFFB99558, new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 450)));
 	}
 }

@@ -47,7 +47,7 @@ public class ClientEvents {
 		//oh god
 		event.register((state, getter, pos, index) -> {
 			if (getter != null && pos != null && index == 1) {
-				ResourceKey<Syrup> syrup = getter.getBlockState(pos.relative(state.getValue(TreeTapperBlock.FACING).getOpposite())).getBlock().builtInRegistryHolder().getData(TwilitGourmet.SYRUP_DATA_MAP);
+				ResourceKey<Syrup> syrup = TreeTapperBlock.getSyrup(getter, pos, state.getValue(TreeTapperBlock.FACING));
 				if (syrup != null) {
 					return Minecraft.getInstance().level.registryAccess().registryOrThrow(TwilitGourmet.SYRUP_KEY).get(syrup).color();
 				}
