@@ -8,10 +8,12 @@ import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.predicates.AnyOfCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemEntityPropertyCondition;
@@ -47,8 +49,15 @@ public class LootModifierGenerator extends GlobalLootModifierProvider {
 		this.add("scavenging_string_from_tf_spiders", this.addItemOnKnifeKill(Items.STRING, TFEntities.HEDGE_SPIDER.get(), TFEntities.SWARM_SPIDER.get(), TFEntities.KING_SPIDER.get()));
 
 		this.add("add_giant_apple_to_leaves", new AddTableLootModifier(new LootItemCondition[]{LootTableIdCondition.builder(TwilightForestMod.prefix("blocks/giant_leaves")).build()}, GourmetLootTables.GIANT_APPLE));
-		this.add("add_ice_knives_to_aurora_palace", new AddTableLootModifier(new LootItemCondition[]{LootTableIdCondition.builder(TFLootTables.AURORA_ROOM.location()).build()}, GourmetLootTables.AURORA_PALACE_INJECTION));
-		this.add("add_knightmetal_knives_to_stronghold", new AddTableLootModifier(new LootItemCondition[]{LootTableIdCondition.builder(TFLootTables.STRONGHOLD_CACHE.location()).build()}, GourmetLootTables.STRONGHOLD_INJECTION));
+		this.add("add_ice_knives_to_aurora_palace", this.addNewLootPool(TFLootTables.AURORA_ROOM, GourmetLootTables.AURORA_PALACE_INJECTION));
+		this.add("add_knightmetal_knives_to_stronghold", this.addNewLootPool(TFLootTables.STRONGHOLD_CACHE, GourmetLootTables.STRONGHOLD_INJECTION));
+
+		this.add("add_seeds_to_loot", this.addNewLootPool(TFLootTables.USELESS_LOOT, GourmetLootTables.SEED_INJECTION));
+		this.add("add_seeds_to_troll_caves", this.addNewLootPool(TFLootTables.TROLL_GARDEN, GourmetLootTables.SEED_INJECTION));
+	}
+
+	private AddTableLootModifier addNewLootPool(ResourceKey<LootTable> lootToAddTo, ResourceKey<LootTable> newPool) {
+		return new AddTableLootModifier(new LootItemCondition[]{LootTableIdCondition.builder(lootToAddTo.location()).build()}, newPool);
 	}
 
 	private AddItemModifier addItemOnKnifeKill(ItemLike item, EntityType<?>... entity) {

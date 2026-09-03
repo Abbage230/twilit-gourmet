@@ -16,6 +16,7 @@ public class GourmetLootTables {
 	public static final ResourceKey<LootTable> GIANT_APPLE = register("injection/giant_apple");
 	public static final ResourceKey<LootTable> AURORA_PALACE_INJECTION = register("injection/aurora_palace");
 	public static final ResourceKey<LootTable> STRONGHOLD_INJECTION = register("injection/stonghold");
+	public static final ResourceKey<LootTable> SEED_INJECTION = register("injection/structure_seeds");
 
 	private static ResourceKey<LootTable> register(String id) {
 		return register(ResourceKey.create(Registries.LOOT_TABLE, TwilitGourmet.prefix(id)));

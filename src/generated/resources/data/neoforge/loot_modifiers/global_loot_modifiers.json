@@ -8,7 +8,9 @@
     "twilitgourmet:scavenging_string_from_tf_spiders",
     "twilitgourmet:add_giant_apple_to_leaves",
     "twilitgourmet:add_ice_knives_to_aurora_palace",
-    "twilitgourmet:add_knightmetal_knives_to_stronghold"
+    "twilitgourmet:add_knightmetal_knives_to_stronghold",
+    "twilitgourmet:add_seeds_to_loot",
+    "twilitgourmet:add_seeds_to_troll_caves"
   ],
   "replace": false
 }

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:cabbage_seeds",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:tomato_seeds",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:rotten_tomato"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:onion",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:rice",
+          "weight": 2
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "twilitgourmet:injection/structure_seeds"
+}
