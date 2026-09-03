@@ -146,7 +146,7 @@ public class LangGenerator extends LanguageProvider {
 		//generate en_ud file
 		JsonObject upsideDownFile = new JsonObject();
 		this.upsideDownEntries.forEach(upsideDownFile::addProperty);
-		futuresBuilder.add(DataProvider.saveStable(cache, upsideDownFile, this.output.getOutputFolder(PackOutput.Target.RESOURCE_PACK).resolve(TwilightForestMod.ID).resolve("lang").resolve("en_ud.json")));
+		futuresBuilder.add(DataProvider.saveStable(cache, upsideDownFile, this.output.getOutputFolder(PackOutput.Target.RESOURCE_PACK).resolve(TwilitGourmet.MODID).resolve("lang").resolve("en_ud.json")));
 
 		return CompletableFuture.allOf(futuresBuilder.build().toArray(CompletableFuture[]::new));
 	}
