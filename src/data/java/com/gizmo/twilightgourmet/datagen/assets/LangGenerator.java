@@ -80,6 +80,7 @@ public class LangGenerator extends LanguageProvider {
 		this.addItem(GourmetItems.CRAB_CAKE, "Crab Cake");
 		this.addItem(GourmetItems.CRAB_QUICHE_SLICE, "Slice of Crab Quiche");
 		this.addItem(GourmetItems.MAZE_CHEESECAKE_SLICE, "Slice of Maze Cheesecake");
+		this.addItem(GourmetItems.CREMESCHNITTE_SLICE, "Slice of Cremeschnitte");
 		this.addItem(GourmetItems.VENISON_KEBAB, "Venison Kebab");
 		this.addItem(GourmetItems.VENISON_SLIDER, "Venison Slider");
 		this.addItem(GourmetItems.VENISON_AND_VEGGIES, "Venison and Root Veggies");
