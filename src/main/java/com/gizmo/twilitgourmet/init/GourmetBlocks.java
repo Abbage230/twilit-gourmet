@@ -38,7 +38,7 @@ public class GourmetBlocks {
 	public static final DeferredBlock<Block> TRANSFORMATION_CABINET = register("transformation_cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
 	public static final DeferredBlock<Block> MINING_CABINET = register("mining_cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL).mapColor(MapColor.SAND)));
 	public static final DeferredBlock<Block> SORTING_CABINET = register("sorting_cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL).mapColor(MapColor.PODZOL)));
-	public static final DeferredBlock<Block> MUSHGLOOM_COLONY = BLOCKS.register("mushgloom_colony", () -> new MushgloomColonyBlock(BlockBehaviour.Properties.ofFullCopy(TFBlocks.MUSHGLOOM.get())));
+	public static final DeferredBlock<Block> MUSHGLOOM_COLONY = BLOCKS.register("mushgloom_colony", () -> new MushgloomColonyBlock(BlockBehaviour.Properties.ofFullCopy(TFBlocks.MUSHGLOOM.get()).randomTicks()));
 
 	//new stuff
 	public static final DeferredBlock<Block> BREADCRUMBS = register("breadcrumbs", () -> new BreadcrumbBlock(BlockBehaviour.Properties.of().replaceable().noCollission().noOcclusion().mapColor(MapColor.TERRACOTTA_BROWN).pushReaction(PushReaction.DESTROY).sound(SoundType.ROOTS)));
